@@ -20,7 +20,13 @@ const schema = buildSchema(`
   }
 `);
 
-const rollDice = ({ numDice, numSides }) => {
+const rollDice: ({
+  numDice,
+  numSides
+}: {
+  readonly numDice: number;
+  readonly numSides: number;
+}) => number[] = ({ numDice, numSides }) => {
   const output = [];
   for (const i = 0; i < numDice; i++) {
     output.push(1 + Math.floor(Math.random() * (numSides || 6)));
@@ -28,25 +34,25 @@ const rollDice = ({ numDice, numSides }) => {
   return output;
 };
 
-const USERS : { [key: string]: any } = {
-  "abc": {
+const USERS: { readonly [key: string]: any } = {
+  abc: {
     age: 25,
     id: "abc",
     name: "Andy"
   },
-    "def": {
-        age: 28,
-        id: "def",
-        name: "Betty"
-    }
+  def: {
+    age: 28,
+    id: "def",
+    name: "Betty"
+  }
 };
 
-const getUser = ({ id }) => {
+const getUser: ({ id }: { readonly id: number }) => any = ({ id }) => {
   return USERS[id];
 };
 
 const getUsers = () => {
-    return Object.values(USERS);
+  return Object.values(USERS);
 };
 
 const root = {
@@ -55,7 +61,7 @@ const root = {
   },
   rollDice,
   user: getUser,
-    users: getUsers
+  users: getUsers
 };
 
 const app = express();

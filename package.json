@@ -1,0 +1,59 @@
+{
+  "name": "try-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-s clean && run-p build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "clean": "trash build test",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"src/**/*.ts\" --write",
+    "fix:tslint": "tslint --fix --project .",
+    "start": "ts-node-dev --respawn --transpileOnly ./src/server.ts | pino-pretty",
+    "test": "mocha -r ts-node/register ./**/*.spec.ts"
+  },
+  "scripts-info": {
+    "info": "Display information about the package scripts",
+    "fix": "Try to automatically fix any linting problems",
+    "test": "Lint and unit test the project"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianhomer/try-graphql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianhomer/try-graphql/issues"
+  },
+  "homepage": "https://github.com/ianhomer/try-graphql#readme",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "@types/express-graphql": "^0.6.2",
+    "@types/graphql": "^14.2.0",
+    "@types/pino": "^5.8.6",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.2.1",
+    "pino": "^5.12.2",
+    "ts-node": "^8.0.3",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.15.2",
+    "trash-cli": "^1.4.0",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-immutable": "^5.0.0",
+    "typescript": "^3.4.2"
+  }
+}

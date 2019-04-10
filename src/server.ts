@@ -47,11 +47,11 @@ const USERS: { readonly [key: string]: any } = {
   }
 };
 
-const getUser: ({ id }: { readonly id: number }) => any = ({ id }) => {
+const user: ({ id }: { readonly id: number }) => any = ({ id }) => {
   return USERS[id];
 };
 
-const getUsers = () => {
+const users = () => {
   return Object.values(USERS);
 };
 
@@ -60,8 +60,8 @@ const root = {
     return Math.random() < 0.5 ? "Take it easy" : "Salvation lies within";
   },
   rollDice,
-  user: getUser,
-  users: getUsers
+  user,
+  users 
 };
 
 const app = express();

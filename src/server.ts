@@ -11,7 +11,7 @@ const schema = buildSchema(`
     name: String
     age: Int
   }
-    
+
   type Query {
     quoteOfTheDay: String
     user(id: String): User
@@ -28,7 +28,7 @@ const rollDice: ({
   readonly numSides: number;
 }) => number[] = ({ numDice, numSides }) => {
   const output = [];
-  for (const i = 0; i < numDice; i++) {
+  for (let i = 0; i < numDice; i++) {
     output.push(1 + Math.floor(Math.random() * (numSides || 6)));
   }
   return output;
@@ -61,7 +61,7 @@ const root = {
   },
   rollDice,
   user,
-  users 
+  users
 };
 
 const app = express();

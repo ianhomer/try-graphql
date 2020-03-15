@@ -10,13 +10,11 @@
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:tslint": "tslint --fix --project .",
-    "start": "ts-node-dev --respawn --transpileOnly ./src/server.ts | pino-pretty",
-    "test": "mocha -r ts-node/register ./**/*.spec.ts"
+    "start": "ts-node-dev --respawn --transpileOnly ./src/server.ts | pino-pretty"
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
-    "fix": "Try to automatically fix any linting problems",
-    "test": "Lint and unit test the project"
+    "fix": "Try to automatically fix any linting problems"
   },
   "repository": {
     "type": "git",

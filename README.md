@@ -1,6 +1,6 @@
 # Try GraphQL
 
-# tl;dr
+## tl;dr
 
     npm install
     npm start
@@ -9,7 +9,7 @@ and access
 
     http://localhost:4000/graphql    
   
-# thanks to
+## thanks to
 
 * https://graphql.github.io/learn/
 * https://www.howtographql.com/

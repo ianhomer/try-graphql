@@ -10,7 +10,8 @@
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:tslint": "tslint --fix --project .",
-    "start": "ts-node-dev --respawn --transpileOnly ./src/server.ts | pino-pretty"
+    "start": "ts-node-dev --respawn --transpileOnly ./src/server.ts | pino-pretty",
+    "update": "npx npm-check-updates -u && npm install --package-lock-only --no-audit"
   },
   "scripts-info": {
     "info": "Display information about the package scripts",

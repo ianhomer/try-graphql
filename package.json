@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.2.0",
-    "chai": "^4.2.0",
+    "chai": "^4.3.0",
     "lodash": "^4.17.20",
     "minimist": ">=1.2.5",
     "mocha": "^8.2.1",

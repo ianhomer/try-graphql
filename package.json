@@ -4,8 +4,7 @@
   "description": "Try GraphQL",
   "main": "index.js",
   "scripts": {
-    "build": "run-s clean && run-p build:*",
-    "build:main": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json",
     "clean": "rimraf build test",
     "fix": "npm fix:prettier && npm run fix:tslint",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",

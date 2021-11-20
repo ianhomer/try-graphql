@@ -22,7 +22,7 @@ const schema = buildSchema(`
 
 const rollDice: ({
   numDice,
-  numSides
+  numSides,
 }: {
   readonly numDice: number;
   readonly numSides: number;
@@ -38,13 +38,13 @@ const USERS: { readonly [key: string]: any } = {
   abc: {
     age: 25,
     id: "abc",
-    name: "Andy"
+    name: "Andy",
   },
   def: {
     age: 28,
     id: "def",
-    name: "Betty"
-  }
+    name: "Betty",
+  },
 };
 
 const user: ({ id }: { readonly id: number }) => any = ({ id }) => {
@@ -61,7 +61,7 @@ const root = {
   },
   rollDice,
   user,
-  users
+  users,
 };
 
 const app = express();
@@ -70,7 +70,7 @@ app.use(
   graphqlHTTP({
     graphiql: true,
     rootValue: root,
-    schema
+    schema,
   })
 );
 

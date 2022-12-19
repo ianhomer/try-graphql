@@ -5,7 +5,7 @@
     pnpm install
     pnpm start
 
-and access <http://localhost:4040/graphql>
+and access <http://localhost:8080/graphql>
 
 ## thanks to
 

@@ -1,13 +1,13 @@
 # Try GraphQL
 
-## tl;dr
+## Getting started
 
-    npm install
-    npm start
+    pnpm install
+    pnpm start
 
 and access <http://localhost:4040/graphql>
 
 ## thanks to
 
-- https://graphql.github.io/learn/
-- https://www.howtographql.com/
+- <https://graphql.github.io/learn/>
+- <https://www.howtographql.com/>

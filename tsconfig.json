@@ -1,26 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "esModuleInterop": true,
     "lib": ["es6", "dom"],
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "module": "commonjs",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "outDir": "./build/main",
+    "pretty": true,
+    "resolveJsonModule": true,
     "rootDir": "src",
     "sourceMap": true,
     "strict": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-
-    /* Additional Checks */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Debugging Options */
-    "traceResolution": false,
-    "listEmittedFiles": false,
-    "listFiles": false,
-    "pretty": true
+    "target": "es5",
+    "traceResolution": false
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules/**"],

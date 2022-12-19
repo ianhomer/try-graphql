@@ -9,7 +9,34 @@ app.get("/", (req, res) => {
   res.send("GraphQL is OK");
 });
 
-const root = { hello: () => "Hiya" };
+class Product {
+  constructor(id, { name, description, price, soldout, stores }) {
+    this.id = id;
+    this.name = name;
+    this.description = description;
+    this.id = id;
+  }
+}
+
+const productDatabase = {};
+
+const root = {
+  product: () => {
+    return {
+      id: 123,
+      name: "something",
+      description: "Something description",
+      price: 30.99,
+      soldout: false,
+      stores: [{ store: "London" }, { store: "Manchester" }],
+    };
+  },
+  createProduct: ({ input }) => {
+    let id = require("crypto").randomBytes(10).toString("hex");
+    productDatabase[id] = input;
+    return new Product(id, input);
+  },
+};
 
 app.use(
   "/graphql",

@@ -24,7 +24,6 @@ jobs:
           pnpm install
           pnpm run update
           pnpm install
-          pnpm run build
         env:
           CI: false
       - name: commit any updates

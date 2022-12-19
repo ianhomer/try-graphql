@@ -27,4 +27,3 @@ jobs:
         with:
           version: 7.x
       - run: pnpm i
-      - run: pnpm build

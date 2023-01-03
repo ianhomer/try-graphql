@@ -1,38 +1,24 @@
 import { buildSchema } from "graphql";
 
 const schema = buildSchema(`
-  type Product {
-    id: ID
+  type Song {
+    id: String
     name: String
-    description: String
-    price: Float
-    soldout: Boolean,
-    stores: [Store]!
+    title: String
+    year: Int
+    artist: String
+    length: Float
   }
 
-  type Store {
-    store: String
+  type Artist {
+    id: String
+    name: String
+    description: String
   }
 
   type Query {
-    getProuct(id : ID): Product
-  }
-
-  input StoreInput {
-    store: String 
-  }
-
-  input ProductInput {
-    id: ID
-    name: String
-    description: String
-    price: Float
-    soldout: Boolean
-    stores: [StoreInput]
-  }
-
-  type Mutation {
-    createProduct(input: ProductInput): Product
+    song(id: String!): Song
+    songs: [Song]
   }
 `);
 

@@ -21,4 +21,18 @@ app.use(
   })
 );
 
-app.listen(8080, () => console.log("Running server"));
+const server = app.listen(8080, () => console.log("Running server"));
+
+const closeHandler = async () => {
+  server.close(async (error) => {
+    console.log("Server closed");
+    if (error) {
+      console.error(`Error on close : ${error}`);
+    }
+    await root.close();
+    process.exit(error ? 1 : 0);
+  });
+}; 
+
+process.on("SIGTERM", closeHandler);
+process.on("SIGINT", closeHandler);

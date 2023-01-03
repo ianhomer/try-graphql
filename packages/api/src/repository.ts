@@ -46,8 +46,8 @@ class Repository {
           type: DataTypes.STRING,
         },
         artist: {
-          type: DataTypes.STRING
-        }
+          type: DataTypes.STRING,
+        },
       },
       { sequelize: this.sequelize, tableName: "songs" }
     );
@@ -59,7 +59,7 @@ class Repository {
       seconds: 3600,
       album: "album 1",
       artist: "artist-1",
-      year: 1990
+      year: 1990,
     });
     await SongDao.create({
       name: "song-2",
@@ -67,7 +67,7 @@ class Repository {
       seconds: 2400,
       album: "album 1",
       artist: "artist-1",
-      year: 1990
+      year: 1990,
     });
     console.log("... data loaded");
   }

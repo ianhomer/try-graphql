@@ -7,7 +7,7 @@ const resolvers = {
   songs: () => {
     return repository.findAllSongs();
   },
-  close: async () => { 
+  close: async () => {
     return repository.close();
   },
 };

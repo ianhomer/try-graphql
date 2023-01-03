@@ -32,7 +32,7 @@ const closeHandler = async () => {
     await root.close();
     process.exit(error ? 1 : 0);
   });
-}; 
+};
 
 process.on("SIGTERM", closeHandler);
 process.on("SIGINT", closeHandler);

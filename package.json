@@ -24,7 +24,7 @@
     "package:fix": "format-package -w",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "start": "nodemon ./index.js --exec babel-node -e js",
+    "start": "nodemon ./src/index.js --exec babel-node -e js",
     "update": "pnpm update -rL"
   },
   "scripts-info": {

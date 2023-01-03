@@ -7,7 +7,7 @@ const schema = buildSchema(`
     title: String
     year: Int
     artist: String
-    length: Float
+    seconds: Int
   }
 
   type Artist {

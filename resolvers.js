@@ -1,25 +1,14 @@
-class Product {
-  constructor(id, { name, description, price, soldout, stores }) {
-    this.id = id;
-    this.name = name;
-    this.price = price;
-    this.description = description;
-    this.id = id;
-    this.soldout = soldout;
-    this.stores = stores;
-  }
-}
+import Repository from "./repository";
 
-const productDatabase = {};
+const repository = new Repository();
+repository.init();
 
 const resolvers = {
-  getProducts: ({ id }) => {
-    return new Product(id, productDatabase[id]);
+  songs: () => {
+    return repository.findAllSongs();
   },
-  createProduct: ({ input }) => {
-    let id = require("crypto").randomBytes(10).toString("hex");
-    productDatabase[id] = input;
-    return new Product(id, input);
+  close: async () => { 
+    return repository.close();
   },
 };
 

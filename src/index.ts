@@ -6,7 +6,7 @@ import schema from "./schema";
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   res.send("GraphQL is OK");
 });
 
@@ -24,7 +24,7 @@ app.use(
 const server = app.listen(8080, () => console.log("Running server"));
 
 const closeHandler = async () => {
-  server.close(async (error) => {
+  server.close(async (error: any) => {
     console.log("Server closed");
     if (error) {
       console.error(`Error on close : ${error}`);

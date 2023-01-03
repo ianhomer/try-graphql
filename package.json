@@ -24,7 +24,7 @@
     "package:fix": "format-package -w",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "start": "nodemon ./index.js --exec babel-node -e js",
+    "start": "nodemon ./src/index.ts",
     "update": "pnpm update -rL"
   },
   "scripts-info": {
@@ -45,6 +45,7 @@
     "@babel/node": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
     "@types/chai": "^4.3.4",
+    "@types/express": "^4.17.15",
     "@types/graphql": "^14.5.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.11.17",

@@ -1,6 +1,5 @@
 .idea/sonarlint
 .idea/workspace.xml
-src/*.js
 node_modules
 dist
 build

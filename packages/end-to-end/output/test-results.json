@@ -1,0 +1,116 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ian/projects/try/try-graphql/packages/end-to-end/results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "Desktop Chrome",
+        "name": "Desktop Chrome",
+        "testDir": "/Users/ian/projects/try/try-graphql/packages/end-to-end/src/test",
+        "testIgnore": [],
+        "testMatch": ["**/?(*.)@(spec|test).*"],
+        "timeout": 10000
+      }
+    ],
+    "reporter": [
+      ["list", null],
+      [
+        "json",
+        {
+          "outputFile": "output/test-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "output/playwright-report"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "/Users/ian/projects/try/try-graphql/packages/end-to-end/playwright.config.mjs",
+    "rootDir": "/Users/ian/projects/try/try-graphql/packages/end-to-end/src/test",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.29.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "app.spec.js",
+      "file": "app.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "should start up OK",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 5113,
+                  "error": {
+                    "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"Try GraphQL\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header.app')\u001b[22m\n\u001b[2m  - waiting for locator('header.app')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"Try GraphQL\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header.app')\u001b[22m\n\u001b[2m  - waiting for locator('header.app')\u001b[22m\n\n    at /Users/ian/projects/try/try-graphql/packages/end-to-end/src/test/app.spec.js:4:44"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ian/projects/try/try-graphql/packages/end-to-end/src/test/app.spec.js",
+                        "column": 44,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"Try GraphQL\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header.app')\u001b[22m\n\u001b[2m  - waiting for locator('header.app')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mapp.spec.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"should start up OK\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"header.app\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"Try GraphQL\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\".song#song-1\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"Song 1\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/ian/projects/try/try-graphql/packages/end-to-end/src/test/app.spec.js:4:44\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-01-04T09:15:41.114Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Users/ian/projects/try/try-graphql/packages/end-to-end/src/test/app.spec.js",
+                    "column": 44,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a510cc93a867214a2ea0-43ce3e113bcc51ac8aae",
+          "file": "app.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

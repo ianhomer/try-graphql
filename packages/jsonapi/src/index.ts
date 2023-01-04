@@ -3,9 +3,14 @@ import express from "express";
 console.log("Initialising JSON API ...");
 
 const app = express();
-
+app.use(express.json());
 app.get("/", (_, res) => {
   res.send("JSON API /api");
+});
+
+app.post("/api/echo", (request, response) => {
+  console.log(`${new Date().getTime()} : Echo`);
+  response.json(request.body);
 });
 
 const PORT = 8081;

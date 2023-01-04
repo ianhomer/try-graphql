@@ -21,7 +21,10 @@ app.use(
   })
 );
 
-const server = app.listen(8080, () => console.log("Running server"));
+const PORT = 8080;
+const server = app.listen(PORT, () =>
+  console.log(`Running server on http://localhost:${PORT}`)
+);
 
 const closeHandler = async () => {
   server.close(async (error: any) => {

@@ -8,7 +8,6 @@
     "eslint": "eslint src --ext .ts --ext .mjs --ext .js",
     "eslint:fix": "eslint src --ext .ts --ext .mjs --ext .js --fix",
     "report:html": "npx playwright show-report",
-    "start": "cd ../.. && pnpm start",
     "test:e2e": "playwright test -g '.*.spec.ts'"
   },
   "keywords": [],
@@ -17,6 +16,7 @@
   "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.29.1",
+    "@types/node": "^18.11.18",
     "allure-playwright": "2.0.0-beta.23",
     "playwright": "^1.29.1",
     "rimraf": "^3.0.2",

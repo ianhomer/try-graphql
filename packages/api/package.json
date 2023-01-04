@@ -8,16 +8,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "clean": "rimraf build test",
+    "clean": "rimraf build",
     "eslint": "eslint src --ext .ts",
     "eslint:fix": "eslint src --ext .ts --fix",
-    "lint": "pnpm run prettier && pnpm run eslint",
-    "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run package:fix",
-    "package:fix": "format-package -w",
-    "prettier": "npx prettier --check .",
-    "prettier:fix": "npx prettier --write .",
-    "start": "nodemon ./src/index.ts",
-    "update": "pnpm update -rL"
+    "start": "nodemon ./src/index.ts"
   },
   "scripts-info": {
     "fix": "Try to automatically fix any linting problems",

@@ -46,10 +46,12 @@ importers:
       '@types/graphql': ^14.5.0
       '@types/mocha': ^10.0.1
       '@types/node': ^18.11.17
+      '@types/papaparse': ^5.3.7
       '@typescript-eslint/eslint-plugin': ^5.46.1
       '@typescript-eslint/parser': ^5.46.1
       chai: ^4.3.7
       cors: ^2.8.5
+      dotenv: ^16.0.3
       eslint: ^8.30.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-simple-import-sort: ^8.0.0
@@ -61,6 +63,7 @@ importers:
       minimist: ^1.2.7
       mocha: ^10.2.0
       nodemon: ^2.0.20
+      papaparse: ^5.3.2
       prettier: ^2.8.1
       rimraf: ^3.0.2
       sequelize: ^6.28.0
@@ -71,10 +74,12 @@ importers:
       '@try-graphql/types': link:../types
       '@types/cors': 2.8.13
       cors: 2.8.5
+      dotenv: 16.0.3
       express: 4.18.2
       express-graphql: 0.12.0_graphql@16.6.0
       graphql: 16.6.0
       nodemon: 2.0.20
+      papaparse: 5.3.2
       sequelize: 6.28.0_sqlite3@5.1.4
       sqlite3: 5.1.4
     devDependencies:
@@ -87,6 +92,7 @@ importers:
       '@types/graphql': 14.5.0
       '@types/mocha': 10.0.1
       '@types/node': 18.11.18
+      '@types/papaparse': 5.3.7
       '@typescript-eslint/eslint-plugin': 5.46.1_mqzxmroayievgzgel6yrqgih5i
       '@typescript-eslint/parser': 5.46.1_lzzuuodtsqwxnvqeq4g4likcqa
       chai: 4.3.7
@@ -3368,6 +3374,12 @@ packages:
 
   /@types/node/18.11.18:
     resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+
+  /@types/papaparse/5.3.7:
+    resolution: {integrity: sha512-f2HKmlnPdCvS0WI33WtCs5GD7X1cxzzS/aduaxSu3I7TbhWlENjSPs6z5TaB9K0J+BH1jbmqTaM+ja5puis4wg==}
+    dependencies:
+      '@types/node': 18.11.18
+    dev: true
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -9614,6 +9626,10 @@ packages:
   /p-try/2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
+
+  /papaparse/5.3.2:
+    resolution: {integrity: sha512-6dNZu0Ki+gyV0eBsFKJhYr+MdQYAzFUGlBMNj3GNrmHxmz1lfRa24CjFObPXtjcetlOv5Ad299MhIK0znp3afw==}
+    dev: false
 
   /param-case/3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}

@@ -1,9 +1,14 @@
 import { Song } from "@try-graphql/types";
+import fs from "fs";
+import papa from "papaparse";
+import path from "path";
 import {
   DataTypes,
+  Dialect,
   InferAttributes,
   InferCreationAttributes,
   Model,
+  Options,
   Sequelize,
 } from "sequelize";
 
@@ -19,11 +24,35 @@ class SongDao
   declare year: number;
 }
 
+const SUPPORTED_DBS = ["sqlite"];
+const databaseArguments = (): Options => {
+  const dialect = process.env.DB_DIALECT;
+  if (dialect) {
+    const storage = process.env.DB_STORAGE;
+    if (!storage) {
+      throw "env DB_STORAGE must be set if DB_DIALECT is set";
+    }
+    console.log(`DB storage : ${storage}`);
+
+    if (!SUPPORTED_DBS.includes(dialect)) {
+      throw `env DB_DIALECT must be one of ${SUPPORTED_DBS}, it is  ${dialect}`;
+    }
+    return {
+      dialect: dialect as Dialect,
+      storage,
+    };
+  }
+  return {
+    dialect: "sqlite",
+    database: process.env.DB_NAME ?? "sqlite::memory",
+  };
+};
+
 class Repository {
   private sequelize;
 
   constructor() {
-    this.sequelize = new Sequelize("sqlite::memory:");
+    this.sequelize = new Sequelize(databaseArguments());
   }
 
   async init() {
@@ -52,23 +81,25 @@ class Repository {
     );
 
     await this.sequelize.sync();
-    await SongDao.create({
-      name: "song-1",
-      title: "Song 1",
-      seconds: 3600,
-      album: "album 1",
-      artist: "artist-1",
-      year: 1990,
+
+    console.log("loading from CSV");
+    const stream = fs.createReadStream(path.join(__dirname, "data.csv"));
+    papa.parse(stream, {
+      header: true,
+      transformHeader: (name) => name.toLowerCase(),
+      error: (error, file) => {
+        console.error(`Cannot read CSV ${file} : ${error}`);
+      },
+      complete: async (results) => {
+        console.log(results);
+        await Promise.all(
+          results.data.map(async (result: any) => {
+            await SongDao.create(result);
+          })
+        );
+        console.log("... data loaded");
+      },
     });
-    await SongDao.create({
-      name: "song-2",
-      title: "Song 2",
-      seconds: 2400,
-      album: "album 1",
-      artist: "artist-1",
-      year: 1990,
-    });
-    console.log("... data loaded");
   }
 
   async findAllSongs(): Promise<Song[]> {

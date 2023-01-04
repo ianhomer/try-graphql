@@ -1,17 +1,8 @@
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { Song } from "@try-graphql/types";
 import React from "react";
 import "./App.css";
-
-const GET_SONGS = gql`
-  query {
-    songs {
-      name
-      title
-      seconds
-    }
-  }
-`;
+import { GET_SONGS } from "./queries";
 
 interface SongsResult {
   songs: Song[];
@@ -28,7 +19,7 @@ function Songs() {
         <p>Loading...</p>
       ) : (
         data.songs.map(({ name, title }) => (
-          <div key={name}>
+          <div className="song" key={name}>
             <h2>{title}</h2>
           </div>
         ))

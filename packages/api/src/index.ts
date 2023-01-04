@@ -8,7 +8,7 @@ import schema from "./schema";
 const app = express();
 
 app.get("/", (_, res) => {
-  res.send("GraphQL is OK");
+  res.send("GraphQL API is available at /graphql");
 });
 
 const root = resolvers;

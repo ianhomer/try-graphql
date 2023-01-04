@@ -15,13 +15,15 @@ const mocks = [
   },
 ];
 
-test("renders learn react link", async () => {
-  render(
-    <MockedProvider mocks={mocks}>
-      <App />
-    </MockedProvider>
-  );
-  const linkElement = screen.getByText(/Try GraphQL/i);
-  expect(linkElement).toBeInTheDocument();
-  expect(await screen.findByText("Song 1")).toBeInTheDocument();
+describe("App", () => {
+  it("should render OK", async () => {
+    render(
+      <MockedProvider mocks={mocks}>
+        <App />
+      </MockedProvider>
+    );
+    const linkElement = screen.getByText(/Try GraphQL/i);
+    expect(linkElement).toBeInTheDocument();
+    expect(await screen.findByText("Song 1")).toBeInTheDocument();
+  });
 });

@@ -1,0 +1,16 @@
+{
+  "name": "@try-graphql/types",
+  "version": "0.0.1",
+  "description": "Try GraphQL types",
+  "license": "ISC",
+  "author": "",
+  "keywords": [],
+  "main": "src/index.ts",
+  "scripts": {
+    "eslint": "eslint src --ext .ts",
+    "eslint:fix": "eslint src --ext .ts --fix"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 
@@ -12,6 +13,7 @@ app.get("/", (_, res) => {
 
 const root = resolvers;
 
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -21,7 +23,10 @@ app.use(
   })
 );
 
-const server = app.listen(8080, () => console.log("Running server"));
+const PORT = 8080;
+const server = app.listen(PORT, () =>
+  console.log(`Running server on http://localhost:${PORT}`)
+);
 
 const closeHandler = async () => {
   server.close(async (error: any) => {

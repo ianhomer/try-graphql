@@ -1,3 +1,4 @@
+import { Song } from "@try-graphql/types";
 import {
   DataTypes,
   InferAttributes,
@@ -5,8 +6,6 @@ import {
   Model,
   Sequelize,
 } from "sequelize";
-
-import { Song } from "./types";
 
 class SongDao
   extends Model<InferAttributes<SongDao>, InferCreationAttributes<SongDao>>

@@ -1,6 +1,10 @@
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
+
+console.log("Initialising API ...");
+dotenv.config({ path: __dirname + "/../.env", debug: true });
 
 import resolvers from "./resolvers";
 import schema from "./schema";

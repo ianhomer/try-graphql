@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
+    "clean": "rimraf build build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test --watchAll=false"
@@ -44,5 +45,8 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }

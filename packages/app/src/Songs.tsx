@@ -12,7 +12,7 @@ function Songs() {
   const { loading, error, data } = useQuery<SongsResult>(GET_SONGS);
 
   return (
-    <>
+    <div className="songs">
       <h1>Songs</h1>
       {error && <p>{JSON.stringify(error) || ""}</p>}
       {loading || !data ? (
@@ -24,7 +24,7 @@ function Songs() {
           </div>
         ))
       )}
-    </>
+    </div>
   );
 }
 

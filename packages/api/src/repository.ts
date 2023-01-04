@@ -40,11 +40,13 @@ const databaseArguments = (): Options => {
     return {
       dialect: dialect as Dialect,
       storage,
+      logging: false,
     };
   }
   return {
     dialect: "sqlite",
     database: process.env.DB_NAME ?? "sqlite::memory",
+    logging: false,
   };
 };
 
@@ -82,22 +84,24 @@ class Repository {
 
     await this.sequelize.sync();
 
-    console.log("loading from CSV");
     const stream = fs.createReadStream(path.join(__dirname, "data.csv"));
-    papa.parse(stream, {
-      header: true,
-      transformHeader: (name) => name.toLowerCase(),
-      error: (error, file) => {
-        console.error(`Cannot read CSV ${file} : ${error}`);
-      },
-      complete: async (results) => {
-        await Promise.all(
-          results.data.map(async (result: any) => {
-            await SongDao.create(result);
-          })
-        );
-        console.log("... data loaded");
-      },
+    await new Promise((resolve, reject) => {
+      papa.parse(stream, {
+        header: true,
+        transformHeader: (name) => name.toLowerCase(),
+        error: (error, file) => {
+          console.error(`Cannot read CSV ${file} : ${error}`);
+          reject();
+        },
+        complete: async (results) => {
+          await Promise.all(
+            results.data.map(
+              async (result: any) => await SongDao.create(result)
+            )
+          );
+          resolve(true);
+        },
+      });
     });
   }
 

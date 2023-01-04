@@ -4,9 +4,9 @@ import express from "express";
 import { graphqlHTTP } from "express-graphql";
 
 console.log("Initialising API ...");
-dotenv.config({ path: __dirname + "/../.env", debug: true });
+dotenv.config({ path: __dirname + "/../.env" });
 
-import resolvers from "./resolvers";
+import createResolvers from "./resolvers";
 import schema from "./schema";
 
 const app = express();
@@ -15,7 +15,7 @@ app.get("/", (_, res) => {
   res.send("GraphQL API is available at /graphql");
 });
 
-const root = resolvers;
+const root = createResolvers();
 
 app.use(cors());
 app.use(

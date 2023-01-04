@@ -8,8 +8,6 @@ const config: PlaywrightTestConfig = {
     baseURL: "http://localhost:3000",
     headless: !!process.env.CI,
     viewport: { width: 1280, height: 720 },
-    ignoreHTTPSErrors: true,
-    video: "on-first-retry",
   },
   webServer: {
     command: "cd ../.. && pnpm start",

@@ -29,12 +29,12 @@ app.use(
 
 const PORT = 8080;
 const server = app.listen(PORT, () =>
-  console.log(`Running server on http://localhost:${PORT}`)
+  console.log(`Running GraphQL server on http://localhost:${PORT}`)
 );
 
 const closeHandler = async () => {
   server.close(async (error: any) => {
-    console.log("Server closed");
+    console.log("GraphQL server closed");
     if (error) {
       console.error(`Error on close : ${error}`);
     }

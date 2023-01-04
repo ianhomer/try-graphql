@@ -91,7 +91,6 @@ class Repository {
         console.error(`Cannot read CSV ${file} : ${error}`);
       },
       complete: async (results) => {
-        console.log(results);
         await Promise.all(
           results.data.map(async (result: any) => {
             await SongDao.create(result);

@@ -25,9 +25,10 @@
     "prepare": "husky install",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "start": "pnpm --filter {packages/**} start",
+    "start": "pnpm --parallel --filter {packages/**} start",
     "test": "pnpm --filter {packages/**} test",
-    "test:e2e": "pnpm --filter @try-graphql/end-to-end test:e2e"
+    "test:e2e": "pnpm --filter @try-graphql/end-to-end test:e2e",
+    "update": "pnpm update -rL"
   },
   "dependencies": {
     "husky": "^8.0.3",

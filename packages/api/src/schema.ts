@@ -16,9 +16,14 @@ const schema = buildSchema(`
     description: String
   }
 
+  type Summary {
+    count: Int
+  }
+
   type Query {
     song(id: String!): Song
     songs: [Song]
+    summary: Summary
   }
 `);
 

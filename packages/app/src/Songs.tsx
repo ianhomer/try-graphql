@@ -14,7 +14,7 @@ const GET_SONGS = gql`
 `;
 
 interface SongsResult {
-  songs: Array<Song>;
+  songs: Song[];
 }
 
 function Songs() {

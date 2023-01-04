@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 
@@ -12,6 +13,7 @@ app.get("/", (_, res) => {
 
 const root = resolvers;
 
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({

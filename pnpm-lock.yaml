@@ -41,6 +41,7 @@ importers:
       '@babel/preset-env': ^7.20.2
       '@try-graphql/types': workspace:0.0.1
       '@types/chai': ^4.3.4
+      '@types/cors': ^2.8.13
       '@types/express': ^4.17.15
       '@types/graphql': ^14.5.0
       '@types/mocha': ^10.0.1
@@ -48,6 +49,7 @@ importers:
       '@typescript-eslint/eslint-plugin': ^5.46.1
       '@typescript-eslint/parser': ^5.46.1
       chai: ^4.3.7
+      cors: ^2.8.5
       eslint: ^8.30.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-simple-import-sort: ^8.0.0
@@ -67,6 +69,8 @@ importers:
       typescript: ^4.9.4
     dependencies:
       '@try-graphql/types': link:../types
+      '@types/cors': 2.8.13
+      cors: 2.8.5
       express: 4.18.2
       express-graphql: 0.12.0_graphql@16.6.0
       graphql: 16.6.0
@@ -3190,6 +3194,12 @@ packages:
     dependencies:
       '@types/node': 18.11.18
 
+  /@types/cors/2.8.13:
+    resolution: {integrity: sha512-RG8AStHlUiV5ysZQKq97copd2UmVYw3/pRMLefISZ3S1hK104Cwm7iLQ3fTKx+lsUH2CE8FlLaYeEA2LSeqYUA==}
+    dependencies:
+      '@types/node': 18.11.18
+    dev: false
+
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
@@ -5029,6 +5039,14 @@ packages:
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    dev: false
+
+  /cors/2.8.5:
+    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
     dev: false
 
   /cosmiconfig-toml-loader/1.0.0:

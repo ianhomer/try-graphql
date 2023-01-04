@@ -140,6 +140,22 @@ importers:
       react-scripts: 5.0.1_o77wnou4wwnegu5woljtklrzru
       typescript: 4.9.4
 
+  packages/end-to-end:
+    specifiers:
+      '@playwright/test': ^1.29.1
+      '@types/node': ^18.11.18
+      allure-playwright: 2.0.0-beta.23
+      playwright: ^1.29.1
+      rimraf: ^3.0.2
+      typescript: ^4.9.4
+    devDependencies:
+      '@playwright/test': 1.29.1
+      '@types/node': 18.11.18
+      allure-playwright: 2.0.0-beta.23
+      playwright: 1.29.1
+      rimraf: 3.0.2
+      typescript: 4.9.4
+
   packages/types:
     specifiers:
       typescript: ^4.9.4
@@ -2820,6 +2836,15 @@ packages:
       webcrypto-core: 1.7.5
     dev: false
 
+  /@playwright/test/1.29.1:
+    resolution: {integrity: sha512-iQxk2DX5U9wOGV3+/Jh9OHPsw5H3mleUL2S4BgQuwtlAfK3PnKvn38m4Rg9zIViGHVW24opSm99HQm/UFLEy6w==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.11.18
+      playwright-core: 1.29.1
+    dev: true
+
   /@pmmmwh/react-refresh-webpack-plugin/0.5.10_unmakpayn7vcxadrrsbqlrpehy:
     resolution: {integrity: sha512-j0Ya0hCFZPd4x40qLzbhGsh9TMtdb+CJQiso+WxLOPNasohq9cc5SNUcwsZaRH6++Xh91Xkm/xHCkuIiIu0LUA==}
     engines: {node: '>= 10.13'}
@@ -3955,6 +3980,19 @@ packages:
       require-from-string: 2.0.2
       uri-js: 4.4.1
     dev: false
+
+  /allure-js-commons/2.0.0-beta.23:
+    resolution: {integrity: sha512-KWIvFfyZWGTCpNLzrFQGwWIyGW2UlDqVrm4gsh5WPw77c/t0ERTIxLjCESz766aMl8KjZC0TAgKJAjQh2AIr+w==}
+    dependencies:
+      properties: 1.2.1
+      uuid: 8.3.2
+    dev: true
+
+  /allure-playwright/2.0.0-beta.23:
+    resolution: {integrity: sha512-0DYsNpVKOE0F0BSapwWrYACrUCgQnpXFdGlh7xMpqeeF8es0BNLf+7IGeX8tYEM7B3MFRpodE7G8nsob6fP4dw==}
+    dependencies:
+      allure-js-commons: 2.0.0-beta.23
+    dev: true
 
   /ansi-colors/4.1.1:
     resolution: {integrity: sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA==}
@@ -9750,6 +9788,21 @@ packages:
       find-up: 3.0.0
     dev: false
 
+  /playwright-core/1.29.1:
+    resolution: {integrity: sha512-20Ai3d+lMkWpI9YZYlxk8gxatfgax5STW8GaMozAHwigLiyiKQrdkt7gaoT9UQR8FIVDg6qVXs9IoZUQrDjIIg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
+  /playwright/1.29.1:
+    resolution: {integrity: sha512-lasC+pMqsQ2uWhNurt3YK3xo0gWlMjslYUylKbHcqF/NTjwp9KStRGO7S6wwz2f52GcSnop8XUK/GymJjdzrxw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: 1.29.1
+    dev: true
+
   /postcss-attribute-case-insensitive/5.0.2_postcss@8.4.20:
     resolution: {integrity: sha512-XIidXV8fDr0kKt28vqki84fRK8VW8eTuIa4PChv2MqKuT6C9UjmSKzen6KaWhWEoYvwxFCa7n/tC1SZ3tyq4SQ==}
     engines: {node: ^12 || ^14 || >=16}
@@ -10632,6 +10685,11 @@ packages:
       object-assign: 4.1.1
       react-is: 16.13.1
     dev: false
+
+  /properties/1.2.1:
+    resolution: {integrity: sha512-qYNxyMj1JeW54i/EWEFsM1cVwxJbtgPp8+0Wg9XjNaK6VE/c4oRi6PNu5p7w1mNXEIQIjV5Wwn8v8Gz82/QzdQ==}
+    engines: {node: '>=0.10'}
+    dev: true
 
   /proxy-addr/2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
@@ -12514,7 +12572,6 @@ packages:
   /uuid/8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
-    dev: false
 
   /v8-compile-cache-lib/3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}

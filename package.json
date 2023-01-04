@@ -26,7 +26,8 @@
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
     "start": "pnpm --filter {packages/**} start",
-    "test": "pnpm --filter {packages/**} test"
+    "test": "pnpm --filter {packages/**} test",
+    "test:e2e": "pnpm --filter @try-graphql/end-to-end test:e2e"
   },
   "dependencies": {
     "husky": "^8.0.3",

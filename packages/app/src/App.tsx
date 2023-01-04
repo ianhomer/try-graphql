@@ -5,7 +5,7 @@ import Songs from "./Songs";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="app">
         Try GraphQL
         <Songs />
       </header>

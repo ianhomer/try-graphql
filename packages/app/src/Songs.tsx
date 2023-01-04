@@ -19,7 +19,7 @@ function Songs() {
         <p>Loading...</p>
       ) : (
         data.songs.map(({ name, title }) => (
-          <div className="song" key={name}>
+          <div className="song" key={name} id={name}>
             <h2>{title}</h2>
           </div>
         ))

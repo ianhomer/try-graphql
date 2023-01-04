@@ -2,6 +2,10 @@
   "name": "@try-graphql/end-to-end",
   "version": "0.0.1",
   "description": "Try GraphQL end to end tests",
+  "license": "ISC",
+  "author": "",
+  "keywords": [],
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf output",
@@ -10,10 +14,6 @@
     "report:html": "npx playwright show-report",
     "test:e2e": "playwright test -g '.*.spec.ts'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.29.1",
     "@types/node": "^18.11.18",

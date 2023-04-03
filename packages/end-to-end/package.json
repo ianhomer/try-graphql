@@ -16,10 +16,10 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.32.1",
-    "@types/node": "^18.15.10",
+    "@types/node": "^18.15.11",
     "allure-playwright": "2.1.0",
     "playwright": "^1.32.1",
     "rimraf": "^4.4.1",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.3"
   }
 }

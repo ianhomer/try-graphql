@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "^3.7.11",
+    "@apollo/client": "^3.7.12",
     "@graphql-codegen/cli": "^3.3.0",
     "@graphql-codegen/client-preset": "^3.0.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -37,7 +37,7 @@
     "@try-graphql/types": "workspace:0.0.1",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.33",
+    "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "@types/testing-library__jest-dom": "^5.14.5",
     "graphql": "^16.6.0",

@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "^3.9.9",
+    "@apollo/client": "^3.9.10",
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/client-preset": "^4.2.5",
     "@testing-library/jest-dom": "^6.4.2",
@@ -36,15 +36,15 @@
     "@testing-library/user-event": "^14.5.2",
     "@try-graphql/types": "workspace:0.0.1",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.2",
-    "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.23",
+    "@types/node": "^20.12.5",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
     "@types/testing-library__jest-dom": "^6.0.0",
     "graphql": "^16.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   },
   "devDependencies": {
     "rimraf": "^5.0.5"

@@ -15,7 +15,7 @@ app.post("/api/echo", (request, response) => {
 
 const PORT = 8081;
 const server = app.listen(PORT, () =>
-  console.log(`Running JSON API server on http://localhost:${PORT}`)
+  console.log(`Running JSON API server on http://localhost:${PORT}`),
 );
 
 const closeHandler = async () => {

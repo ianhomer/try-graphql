@@ -23,12 +23,12 @@ createResolvers().then((root) => {
       schema: schema,
       rootValue: root,
       graphiql: true,
-    })
+    }),
   );
 
   const PORT = 8080;
   const server = app.listen(PORT, () =>
-    console.log(`Running GraphQL server on http://localhost:${PORT}`)
+    console.log(`Running GraphQL server on http://localhost:${PORT}`),
   );
 
   const closeHandler = async () => {

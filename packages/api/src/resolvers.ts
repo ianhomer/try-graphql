@@ -19,7 +19,7 @@ const createResolvers = async () => {
         data: songs,
       });
       console.log(
-        `${new Date().getTime()} : Summary count ${response.data.length}`
+        `${new Date().getTime()} : Summary count ${response.data.length}`,
       );
       return {
         count: response.data.length,

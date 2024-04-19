@@ -79,7 +79,7 @@ class Repository {
           type: DataTypes.STRING,
         },
       },
-      { sequelize: this.sequelize, tableName: "songs" }
+      { sequelize: this.sequelize, tableName: "songs" },
     );
 
     await this.sequelize.sync();
@@ -96,8 +96,8 @@ class Repository {
         complete: async (results) => {
           await Promise.all(
             results.data.map(
-              async (result: any) => await SongDao.create(result)
-            )
+              async (result: any) => await SongDao.create(result),
+            ),
           );
           resolve(true);
         },

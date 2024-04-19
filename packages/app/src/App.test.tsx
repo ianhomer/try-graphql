@@ -20,7 +20,7 @@ describe("App", () => {
     render(
       <MockedProvider mocks={mocks}>
         <App />
-      </MockedProvider>
+      </MockedProvider>,
     );
     const linkElement = screen.getByText(/Try GraphQL/i);
     expect(linkElement).toBeInTheDocument();

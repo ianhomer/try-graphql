@@ -28,25 +28,25 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "^3.9.11",
+    "@apollo/client": "^3.11.8",
     "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/client-preset": "^4.2.5",
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^15.0.2",
+    "@graphql-codegen/client-preset": "^4.3.3",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
-    "@try-graphql/types": "workspace:0.0.1",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.2.78",
-    "@types/react-dom": "^18.2.25",
+    "@try-graphql/types": "workspace:*",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.6.0",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
     "@types/testing-library__jest-dom": "^6.0.0",
-    "graphql": "^16.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "graphql": "^16.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "typescript": "^5.4.5"
+    "typescript": "^5.6.2"
   },
   "devDependencies": {
-    "rimraf": "^5.0.5"
+    "rimraf": "^6.0.1"
   }
 }

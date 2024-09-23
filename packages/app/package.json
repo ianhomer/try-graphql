@@ -6,7 +6,7 @@
     "build": "react-scripts build",
     "clean": "rimraf build build",
     "eject": "react-scripts eject",
-    "start": "react-scripts start",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "test": "react-scripts test --watchAll=false"
   },
   "browserslist": {

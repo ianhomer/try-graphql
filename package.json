@@ -22,7 +22,7 @@
     "lint": "pnpm prettier && pnpm eslint:packages",
     "lint:fix": "pnpm package:fix && pnpm prettier:fix && pnpm eslint:fix",
     "package:fix": "format-package -w",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
     "start": "pnpm --parallel --filter {packages/**} start",

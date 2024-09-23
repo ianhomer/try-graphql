@@ -32,7 +32,7 @@ export default [
       "@typescript-eslint": typescriptEslint,
       "no-only-tests": noOnlyTests,
       "simple-import-sort": simpleImportSort,
-      sonarjs
+      sonarjs,
     },
 
     languageOptions: {

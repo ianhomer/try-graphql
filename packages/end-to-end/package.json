@@ -15,10 +15,10 @@
     "test:e2e": "playwright test -g '.*.spec.ts'"
   },
   "devDependencies": {
-    "@playwright/test": "^1.53.1",
-    "@types/node": "^24.0.7",
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10",
     "allure-playwright": "3.3.0",
-    "playwright": "^1.53.1",
+    "playwright": "^1.53.2",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
   }

@@ -34,10 +34,10 @@
     "sqlite3": "5.1.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.28.0",
-    "@babel/core": "7.28.0",
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "7.28.3",
     "@babel/node": "^7.28.0",
-    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-env": "^7.28.3",
     "@babel/preset-typescript": "^7.27.1",
     "@types/axios": "^0.14.4",
     "@types/chai": "^5.2.2",
@@ -45,7 +45,7 @@
     "@types/graphql": "^14.5.0",
     "@types/jest": "^30.0.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^24.2.1",
+    "@types/node": "^24.3.0",
     "@types/papaparse": "^5.3.16",
     "chai": "^5.2.1",
     "eslint": "9.33.0",
